@@ -20,14 +20,36 @@
     <div class="row">
         <div class="group">
             <div class="container">
-                <a href="/" class="link">Link</a>
+                <a href="/" class="link prominent">Go to settings</a>
             </div>
-            <p>Menu Item as a Parent with Subtext and illustration</p>
-            <p>If there is no illustartion or icon used instead of illustartion make sure that the left-container has
-                minWidth of 52px.</p>
-            <p>You can used menu items with smaller icons if separated by divider.</p>
+            <p>Testing link prominent</p>
+        </div>
+
+        <div class="group">
+            <div class="container">
+                <a href="/" class="link subtle">Go to settings</a>
+            </div>
+            <p>Testing link subtle</p>
         </div>
     </div>
+
+        <!-- next row -->
+
+        <div class="row">
+            <div class="group">
+                <div class="container">
+                    <p>When providing the content for the link, <a href="/" class="link prominent">Go to settings</a> avoid generic descriptions like "click here" or "go to". Instead, use specific descriptions.</p>
+                </div>
+                <p>Testing link prominent inline</p>
+            </div>
+    
+            <div class="group">
+                <div class="container">
+                    <p>When providing the content for the link, <a href="/" class="link subtle">Go to settings</a> avoid generic descriptions like "click here" or "go to". Instead, use specific descriptions.</p>
+                </div>
+                <p>Testing link subtle inline</p>
+            </div>
+        </div>
 
 </body>
 
@@ -42,6 +64,7 @@
         justify-content: center;
         flex-direction: column;
         gap: 48px;
+        box-sizing: border-box;
     }
 
     .row {
@@ -69,7 +92,6 @@
     }
 
     .header {
-        width: 100%;
         display: flex;
         gap: 8px;
         flex-direction: column;
@@ -112,4 +134,37 @@
         text-decoration: none;
         color: #2436B1;
     }
+
+    a.link {
+        line-height: 20px;
+        padding: 0 2px;
+        border-bottom: 1px solid;
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+    }
+    a.link.prominent {
+        color: #3859FF;
+    }
+    a.link.prominent:hover {
+        color: #2436B1;
+    }
+    a.link.prominent:active {
+        color: #122277;
+    }
+
+    a.link.subtle {
+        color: #050038;
+        border-color: #C7C7D1;
+    }
+    a.link.subtle:hover {
+        color: #504D6C;
+        border-color: #AFAEB8;
+    }
+    a.link.subtle:active {
+        color: #686685;
+        border-color: #9897A4;
+    }
+
 </style>
