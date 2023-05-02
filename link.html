@@ -2,16 +2,17 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
 </head>
 
 <body>
 
     <div class="header">
-        <h3>Components playground</h3>
-        <h2>Design System Navigation:</h2>
         <ul>
+            <h3>Components playground</h3>
             <li><a href="/">Dropdown Menu Item</a></li>
-            <li><a href="/link">Link</a></li>
+            <li class="current"><a href="/link.html">Link</a></li>
+            <li><a href="/notifications.html">Notifications</a></li>
         </ul>
     </div>
 
@@ -33,107 +34,68 @@
         </div>
     </div>
 
-        <!-- next row -->
+    <!-- next row -->
 
-        <div class="row">
-            <div class="group">
-                <div class="container">
-                    <p>When providing the content for the link, <a href="/" class="link prominent">Go to settings</a> avoid generic descriptions like "click here" or "go to". Instead, use specific descriptions.</p>
-                </div>
-                <p>Testing link prominent inline</p>
+    <div class="row">
+        <div class="group">
+            <div class="container">
+                <p>When providing the content for the link, <a href="/" class="link prominent">Go to settings</a> avoid
+                    generic descriptions like "click here" or "go to". Instead, use specific descriptions.</p>
             </div>
-    
-            <div class="group">
-                <div class="container">
-                    <p>When providing the content for the link, <a href="/" class="link subtle">Go to settings</a> avoid generic descriptions like "click here" or "go to". Instead, use specific descriptions.</p>
-                </div>
-                <p>Testing link subtle inline</p>
-            </div>
+            <p>Testing link prominent inline</p>
         </div>
 
+        <div class="group">
+            <div class="container">
+                <p>When providing the content for the link, <a href="/" class="link subtle">Go to settings</a> avoid
+                    generic descriptions like "click here" or "go to". Instead, use specific descriptions.</p>
+            </div>
+            <p>Testing link subtle inline</p>
+        </div>
+    </div>
+
+    <!-- next row -->
+
+    <div class="row">
+        <div class="group">
+            <div class="container dialog">
+                <p>When providing the content for the link, <a href="/" class="link prominent">Go to settings</a> avoid
+                    generic descriptions like "click here" or "go to". Instead, use specific descriptions.</p>
+            </div>
+            <p>Example of the dialog box with link inside</p>
+        </div>
+
+        <div class="group">
+            <div class="container dialog">
+                <p>When providing the content for the link, <a href="/" class="link subtle">Go to settings</a> avoid
+                    generic descriptions like "click here" or "go to". Instead, use specific descriptions.</p>
+            </div>
+            <p>Example of the dialog box with link inside</p>
+        </div>
+    </div>
+
+    <!-- next row -->
 </body>
 
 </html>
 
 <style>
-    body {
-        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='12' height='12' fill='%23F6F6F6'/%3E%3Crect x='5' y='5' width='2' height='2' rx='1' fill='%23D7D7D7'/%3E%3C/svg%3E%0A");
-        background-size: 12px 12px;
+    /* Dialog starts here */
+
+    .dialog {
+        padding: 56px;
+        border-radius: 8px;
+        background-color: var(--page);
+        box-shadow: var(--shadow);
         display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
-        gap: 48px;
-        box-sizing: border-box;
+        min-width: 420px;
     }
-
-    .row {
-        display: flex;
-        flex-direction: row;
-        gap: 24px;
-        max-width: fit-content;
-        align-items: flex-start;
-    }
-
     .group {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin: 24px;
-        max-width: calc(272px + 24px);
+        max-width: calc(468px + 24px);
     }
 
-    .group p {
-        font-size: 16px;
-        line-height: 24px;
-        font-family: 'Open Sans', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-    }
-
-    .header {
-        display: flex;
-        gap: 8px;
-        flex-direction: column;
-        padding: 24px 0;
-    }
-
-    .header h3 {
-        font-family: 'Open Sans', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 100%;
-        margin: 0;
-    }
-
-    .header h2 {
-        font-family: 'Open Sans', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 100%;
-        margin: 0;
-    }
-
-    .header ul {
-        display: flex;
-        gap: 8px;
-        flex-direction: column;
-    }
-
-    .header ul li {
-        font-family: 'Open Sans', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 100%;
-    }
-
-    .header ul li a {
-        text-decoration: none;
-        color: #2436B1;
-    }
+    /* Dialog ends here */
 
     a.link {
         line-height: 20px;
@@ -144,27 +106,38 @@
         font-style: normal;
         font-weight: 400;
     }
+
     a.link.prominent {
         color: #3859FF;
     }
+
     a.link.prominent:hover {
         color: #2436B1;
+        background-color: #D9E0FF;
     }
+
     a.link.prominent:active {
         color: #122277;
     }
 
     a.link.subtle {
         color: #050038;
-        border-color: #C7C7D1;
-    }
-    a.link.subtle:hover {
-        color: #504D6C;
-        border-color: #AFAEB8;
-    }
-    a.link.subtle:active {
-        color: #686685;
-        border-color: #9897A4;
+        border-color: #050038;
     }
 
+    a.link.subtle:hover {
+        color: #504D6C;
+        border-color: #504D6C;
+    }
+
+    a.link.subtle:active {
+        color: #686685;
+        border-color: #686685;
+    }
+
+    a.link:focus-visible {
+        appearance: none;
+        outline: none;
+        box-shadow: var(--focus);
+    }
 </style>
