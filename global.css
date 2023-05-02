@@ -142,7 +142,7 @@ body {
     width: min-content;
     cursor: pointer;
 
-/* testing text */
+    /* testing text */
 
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -171,4 +171,15 @@ body {
 
 .outline:hover {
     border-color: #afaeb9;
+}
+
+h2 {
+    font-family: 'Formular';
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text);
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 135%;
 }
