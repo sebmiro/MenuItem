@@ -1,17 +1,63 @@
 :root {
+    --header-link: #2436B1;
+
     --shadow: 0px 4px 16px rgba(5, 0, 56, 0.12);
     --page: #fff;
     --focus: 0px 0px 0px 4px #D9E0FF, inset 0px 0px 0px 2px #6881FF, inset 0px 0px 0px 3px #FFFFFF;
     --text: #050038;
+    --text-inverted: #fff;
+
+    --static-text: #050038;
+    --static-text-inverted: #fff;
+
+    --static-link: #050038;
+    --static-link-inverted: #fff;
+
+    --static-btn: #050038;
+    --static-btn-inverted: #fff;
+
+    --bg-subtle: #fff;
+    --bg-subtle-hover: #e7e7e7;
+    --bg-subtle-active: #d8d8d8;
+
+    --border: #c7c7d1;
+    --border-hover: #afaeb8;
+    --border-active: #9897a4;
+
+    --icon: #020c35;
+    --icon-prominent: #3859ff;
 
     --static-danger-prominent: #d92342;
     --static-warning-prominent: #ffce00;
+}
+
+.expanded {
+    --header-link: #96a5f2;
+
+    --focus: 0px 0px 0px 4px #2c3f9e, inset 0px 0px 0px 2px #6182ff, inset 0px 0px 0px 3px #0f0f0f;
+    --page: #303030;
+    --text: #dedede;
+
+    --icon: #b5b5b5;
+    --icon-prominent: #8091ea;
+
+    --bg-subtle: transparent;
+    --bg-subtle-hover: #616161;
+    --bg-subtle-active: #303030;
+
+    --border: #878787;
+    --border-hover: #777777;
+    --border-active: #303030;
 }
 
 .header ul li a:focus-visible {
     appearance: none;
     outline: none;
     box-shadow: var(--focus);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -24,7 +70,7 @@ body {
     gap: 48px;
     box-sizing: border-box;
     position: relative;
-    color: var(--text);
+    color: var(--static-text);
 }
 
 .row {
@@ -42,12 +88,8 @@ body {
     margin: 24px;
 }
 
-.group p {
-    font-size: 16px;
-    line-height: 24px;
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
+.group>p {
+    margin: 16px 0;
 }
 
 .group ul {
@@ -78,6 +120,7 @@ body {
     font-size: 20px;
     line-height: 100%;
     margin: 0;
+    color: var(--text);
 }
 
 .header h2 {
@@ -87,6 +130,7 @@ body {
     font-size: 24px;
     line-height: 100%;
     margin: 0;
+    color: var(--text);
 }
 
 .header ul {
@@ -95,7 +139,7 @@ body {
     flex-direction: row;
     background: var(--page);
     border-radius: 4px;
-    padding: 12px 16px;
+    padding: 8px 16px;
     box-shadow: var(--shadow);
     width: fit-content;
     min-height: 36px;
@@ -104,6 +148,7 @@ body {
     top: 16px;
     left: 16px;
     z-index: 9;
+    min-height: 56px;
 }
 
 .header ul li {
@@ -117,7 +162,7 @@ body {
 
 .header ul li a {
     text-decoration: none;
-    color: #2436B1;
+    color: var(--header-link);
     border-radius: 2px;
     padding: 0 8px;
     height: 32px;
@@ -127,7 +172,7 @@ body {
 
 .header ul li.current a {
     background: #3859FF;
-    color: var(--page);
+    color: var(--text-inverted);
 }
 
 /* Global styles for the components */
@@ -141,6 +186,7 @@ body {
     justify-content: center;
     width: min-content;
     cursor: pointer;
+    background-color: var(--bg-subtle);
 
     /* testing text */
 
@@ -151,8 +197,18 @@ body {
     font-weight: 400;
 }
 
+.btn:focus-visible {
+    appearance: none;
+    outline: none;
+    box-shadow: var(--focus);
+}
+
 .btn:hover {
-    background-color: #e7e7e7;
+    background-color: var(--bg-subtle-hover);
+}
+
+.btn:active {
+    background-color: var(--bg-subtle-active);
 }
 
 .btn svg {
@@ -161,25 +217,52 @@ body {
 }
 
 .btn svg path {
-    stroke: #020c35;
+    stroke: var(--icon);
+}
+
+.btn.expanded svg path {
+    stroke: #3859FF;
 }
 
 .outline {
     border: 1px solid;
-    border-color: #c7c7d2;
+    border-color: var(--border);
 }
 
 .outline:hover {
-    border-color: #afaeb9;
+    border-color: var(--border-hover);
+}
+
+.outline:active {
+    border-color: var(--border-active);
 }
 
 h2 {
     font-family: 'Formular';
     font-family: 'Open Sans', sans-serif;
-    color: var(--text);
+    color: var(--static-text);
 
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 135%;
+    margin: 0;
+    line-height: 24px;
+    gap: 16px;
+    display: flex;
+    align-items: center;
+}
+
+h2 svg path {
+    stroke: var(--icon-prominent);
+}
+
+p {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    color: var(--static-text);
 }
