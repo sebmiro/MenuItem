@@ -14,6 +14,26 @@
             <li><a href="/">Dropdown Menu Item</a></li>
             <li><a href="/link.html">Link</a></li>
             <li class="current"><a href="/notifications.html">Notifications</a></li>
+            <div class="btn expand" tabindex="0">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1908_1065)">
+                        <path d="M22 21.0003L22.001 21" stroke="black" stroke-width="4"></path>
+                        <path d="M22 21.0003L22.001 21" stroke="black" stroke-width="6"></path>
+                        <path d="M22 21.0003L22.001 21" stroke="black" stroke-width="8"></path>
+                        <path d="M22 21.0003L22.001 21" stroke="black" stroke-width="10"></path>
+                        <path d="M22 21.0003L22.001 21" stroke="black" stroke-width="12"></path>
+                        <path
+                            d="M3 6.00017C3 6.00017 5.46367 5.71763 7 6.00017C12.7612 7.05971 10.2816 16.7294 16 18.0002C17.9061 18.4238 21 18.0002 21 18.0002M21 18.0002L18 15.0002M21 18.0002L18 21.0002M3 18C3 18 5.46367 18.2825 7 18C7.86387 17.8411 8.54246 17.4887 9.09118 17M21 6C21 6 17.9061 5.57642 16 6C15.1814 6.18191 14.5308 6.53593 14 7.01216M21 6L18 9M21 6L18 3"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1908_1065">
+                            <rect width="24" height="24" fill="white"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
         </ul>
     </div>
 
@@ -40,7 +60,7 @@
         <div class="group">
             <div class="container notification">
                 <p>When providing the content for the link, <a href="/" class="link prominent">Go to settings</a></p>
-                <div class="btn outline">
+                <div class="btn outline" tabindex="0">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 6L18 18M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round" />
                     </svg>
@@ -58,7 +78,7 @@
         <div class="group">
             <div class="container notification danger">
                 <p>When providing the content for the link, <a href="/" class="link prominent">Go to settings</a></p>
-                <div class="btn outline">
+                <div class="btn outline" tabindex="0">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 6L18 18M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round" />
                     </svg>
@@ -76,7 +96,7 @@
         <div class="group">
             <div class="container notification warning">
                 <p>When providing the content for the link, <a href="/" class="link prominent">Go to settings</a></p>
-                <div class="btn outline">
+                <div class="btn outline" tabindex="0">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 6L18 18M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round" />
                     </svg>
@@ -84,6 +104,29 @@
                 </div>
             </div>
             <p>Example of the top banner notification in the warning state.</p>
+            <p>Important: As you can see we can not use default Links, Icon Button or Buttons inside Components that use
+                static tokens. Instead we should overwrite Icon Button with static tokens:</p>
+            <ul>
+                <li>--static-border-subtle</li>
+                <li>--static-border-subtle-hover</li>
+                <li>--static-border-subtle-active</li>
+                <li>--static-icon-subtle</li>
+                <li>--static-icon-subtle-hover</li>
+                <li>--static-icon-subtle-active</li>
+                <li>--static-background-subtle</li>
+                <li>--static-background-subtle-hover</li>
+                <li>--static-background-subtle-active</li>
+            </ul>
+            <div class="container notification warning correct">
+                <p>When providing the content for the link, <a href="/" class="link prominent">Go to settings</a></p>
+                <div class="btn outline" tabindex="0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18 18M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+
+                </div>
+            </div>
+            <p>Correct version with Icon Button that uses static Alias tokens.</p>
         </div>
     </div>
 
@@ -91,7 +134,7 @@
 
     <div class="row">
         <div class="group">
-            <p>Final thoughts</p>
+            <h2>Final thoughts</h2>
             <p>I believe we have to expand our tokens about the static alias color tokens:</p>
             <ul>
                 <li>Static tokens in the following sentiments: Danger, Warninig, Success and Primary. Total 4 colors.
@@ -103,6 +146,37 @@
                 <li>Text Neutrals Inverted, Border Neutrals Inverted, Icon Neutrals Inverted, Background Nueutrals Alpha
                     Inverted Hover, Background Neutrals Alpha Inverted Active</li>
             </ul>
+        </div>
+    </div>
+
+    <!-- next row -->
+
+    <div class="row">
+        <div class="group">
+            <div class="container notification base">
+                <h2><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1778_769)">
+                            <path d="M12 13H18M6 17H2V3H22V17H18M6 17V21M6 17H18M18 17V21" stroke="black"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1778_769">
+                                <rect width="24" height="24" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg> Some users won’t have access</h2>
+                <p>When providing the content for the link, <a href="/" class="link subtle">Go to settings</a> avoid
+                    generic descriptions like "click here" or "go to". Instead, use specific descriptions.</p>
+
+                <div class="btn" tabindex="0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18 18M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+
+                </div>
+            </div>
+            <p>Example of the notification banner with base styles used for "What's new" type.</p>
         </div>
     </div>
 
@@ -125,33 +199,101 @@
         gap: 16px;
         align-items: center;
         justify-content: space-between;
+        min-height: 56px;
+    }
+
+    .notification p,
+    .notification a,
+    .notification h2 {
+        color: var(--text);
+    }
+
+    .base {
+        padding: 56px;
+        box-shadow: var(--shadow);
+        border-radius: 8px;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+        position: relative;
+        max-width: 520px;
     }
 
     .danger {
         background-color: var(--static-danger-prominent);
-        color: var(--page);
+    }
+
+    .danger p {
+        color: var(--static-text-inverted);
     }
 
     .warning {
         background-color: var(--static-warning-prominent);
     }
 
+    .warning p {
+        color: var(--static-text);
+    }
+
+    /* Overwrites based on the static tokens */
+
     .danger a.link {
-        color: var(--page);
-        border-color: var(--page);
+        color: var(--static-link-inverted);
+        border-color: var(--static-link-inverted);
     }
 
     .danger .btn svg path {
-        stroke: var(--page);
+        stroke: var(--static-btn-inverted);
+    }
+
+    .warning a.link {
+        color: var(--static-link);
+        border-color: var(--static-link);
+    }
+
+    .base .btn {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+    }
+
+    .danger .btn {
+        background-color: transparent;
     }
 
     .danger .btn:hover {
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .danger .btn:active {
+        background-color: rgba(255, 255, 255, 0.3);
     }
 
     .danger .outline {
-        border-color: var(--page);
+        border-color: var(--static-btn-inverted);
     }
+
+    .warning.correct .btn {
+        background-color: transparent;
+    }
+
+    .warning.correct .btn:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .warning.correct .btn:active {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .warning.correct .outline {
+        border-color: var(--static-btn);
+    }
+
+    .warning.correct .btn svg path {
+        stroke: var(--static-btn);
+    }
+
+    /* End of the overwrites for the base components */
 
     a.link {
         line-height: 20px;
@@ -170,3 +312,12 @@
 
     /* Top Banner ends here */
 </style>
+
+<script>
+    var el = document.querySelector('.expand');
+    var body = document.querySelector('body');
+
+    el.onclick = function () {
+        body.classList.toggle('expanded');
+    }
+</script>
