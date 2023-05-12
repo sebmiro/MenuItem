@@ -14,6 +14,26 @@
             <li class="current"><a href="/">Dropdown Menu Item</a></li>
             <li><a href="/link.html">Link</a></li>
             <li><a href="/notifications.html">Notifications</a></li>
+            <div class="btn expand" tabindex="0">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1908_1065)">
+                        <path d="M22 21.0003L22.001 21" stroke="black" stroke-width="4"></path>
+                        <path d="M22 21.0003L22.001 21" stroke="black" stroke-width="6"></path>
+                        <path d="M22 21.0003L22.001 21" stroke="black" stroke-width="8"></path>
+                        <path d="M22 21.0003L22.001 21" stroke="black" stroke-width="10"></path>
+                        <path d="M22 21.0003L22.001 21" stroke="black" stroke-width="12"></path>
+                        <path
+                            d="M3 6.00017C3 6.00017 5.46367 5.71763 7 6.00017C12.7612 7.05971 10.2816 16.7294 16 18.0002C17.9061 18.4238 21 18.0002 21 18.0002M21 18.0002L18 15.0002M21 18.0002L18 21.0002M3 18C3 18 5.46367 18.2825 7 18C7.86387 17.8411 8.54246 17.4887 9.09118 17M21 6C21 6 17.9061 5.57642 16 6C15.1814 6.18191 14.5308 6.53593 14 7.01216M21 6L18 9M21 6L18 3"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1908_1065">
+                            <rect width="24" height="24" fill="white"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
         </ul>
     </div>
 
@@ -1824,328 +1844,13 @@
     .group {
         max-width: calc(272px + 24px);
     }
-
-    .divider {
-        height: 1px;
-        width: 100%;
-        background: #E7E7E7;
-    }
-
-    form {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        width: 100%;
-        gap: 4px;
-    }
-
-    [type="radio"]:checked,
-    [type="radio"]:not(:checked) {
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        opacity: 0;
-        z-index: 2;
-        cursor: pointer;
-    }
-
-    [type="radio"]:checked+.actions-container,
-    [type="radio"]:not(:checked)+.actions-container {
-        position: relative;
-    }
-
-    .menu-item {
-        position: relative;
-    }
-
-    [type="radio"]:checked+.actions-container .radiobutton,
-    [type="radio"]:not(:checked)+.actions-container .radiobutton {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0px 2px;
-        gap: 10px;
-        position: relative;
-        margin: 4px;
-        width: 16px;
-        height: 16px;
-        border: 1px solid #9897A4;
-        border-radius: 10px;
-        box-sizing: border-box;
-    }
-
-    [type="radio"]:checked+.actions-container .radiobutton {
-        border: 1px solid #3859FF;
-    }
-
-    .menu-item:hover [type="radio"]:checked+.actions-container .radiobutton,
-    .menu-item:hover [type="radio"]:not(:checked)+.actions-container .radiobutton {
-        border: 1px solid #2436B1;
-    }
-
-    .menu-item:hover [type="radio"]:checked+.actions-container .radiobutton:after {
-        background: #2436B1;
-    }
-
-    [type="radio"]:checked+.actions-container .radiobutton:after,
-    [type="radio"]:not(:checked)+.actions-container .radiobutton:after {
-        content: '';
-        width: 8px;
-        height: 8px;
-        background: #3859FF;
-        position: absolute;
-        border-radius: 100%;
-        -webkit-transition: all 0.2s ease;
-        transition: all 0.2s ease;
-    }
-
-    [type="radio"]:not(:checked)+.actions-container .radiobutton:after {
-        opacity: 0;
-        -webkit-transform: scale(0);
-        transform: scale(0);
-    }
-
-    [type="radio"]:checked+.actions-container .radiobutton:after {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-
-    .maxheight {
-        max-height: 236px;
-        overflow-y: scroll;
-        height: 100%;
-    }
-
-    /* width */
-    ::-webkit-scrollbar {
-        width: 4px;
-    }
-
-    /* Track */
-    ::-webkit-scrollbar-track {
-        box-shadow: none;
-        border-radius: 0;
-    }
-
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        background: #C7C7D1;
-        border-radius: 4px;
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: #AFAEB8;
-    }
-
-    .body-container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        width: fit-content;
-    }
-
-    .header-container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        width: 100%;
-    }
-
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        width: 100%;
-    }
-
-    .placeholder-field {
-        min-height: 40px;
-        width: 100%;
-        box-sizing: border-box;
-        border-radius: 4px;
-        background-color: rgba(236, 238, 247, 0.4);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 0 8px;
-    }
-
-    .placeholder-field p {
-        padding: 8px 0;
-        margin: 0;
-        color: #bdbcd4;
-    }
-
-    .container {
-        background: var(--page);
-        border-radius: 4px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 12px;
-        box-shadow: var(--shadow);
-        gap: 12px;
-        width: fit-content;
-    }
-
-    .menu-item {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: row;
-        max-width: 272px;
-        border-radius: 4px;
-        padding-right: 8px;
-        cursor: pointer;
-        background-color: var(--page);
-        font-family: 'Open Sans', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
-        color: #050038;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .menu-item:focus-visible {
-        appearance: none;
-        outline: none;
-        box-shadow: var(--focus);
-    }
-
-    .menu-item svg.icon {
-        width: 16px;
-        height: 16px;
-    }
-
-    .menu-item svg.icon path {
-        stroke: #504D6C;
-    }
-
-    .menu-item svg.icon path[fill="black"] {
-        fill: #504D6C;
-    }
-
-    .menu-item svg.icon rect {
-        fill: #504D6C;
-    }
-
-    .menu-item:hover {
-        background-color: #F1F3FD;
-    }
-
-    .menu-item:active {
-        background-color: #D9E0FF;
-    }
-
-    .menu-item:hover span:not(.subtext) {
-        color: #2436B1;
-    }
-
-    .menu-item:active span:not(.subtext) {
-        color: #122277;
-    }
-
-    .menu-item:hover svg.icon path {
-        stroke: #2436B1;
-    }
-
-    .menu-item:hover svg.icon rect {
-        fill: #2436B1;
-    }
-
-    .menu-item:hover svg.icon path[fill="black"] {
-        fill: #2436B1;
-    }
-
-    .menu-item .icon-container {
-        display: flex;
-        flex-direction: column;
-        padding-left: 8px;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        min-width: 24px;
-    }
-
-    .menu-item+.menu-item.icon .icon-container {
-        display: flex;
-        flex-direction: column;
-        padding-left: 8px;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        min-width: 52px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    span {
-        user-select: none;
-    }
-
-    .menu-item .label-container {
-        display: flex;
-        flex-direction: column;
-        padding-left: 8px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        flex: 1;
-    }
-
-    .menu-item .label-container .subtext {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 18px;
-        color: #686685;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    .menu-item .actions-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        min-height: 40px;
-        padding-left: 16px;
-        min-width: 8px;
-    }
-
-    .menu-item .hotkey-container span {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
-        font-family: 'Open Sans', sans-serif;
-        color: #686685;
-    }
-
-    .arrow-icon-container {
-        overflow: hidden;
-        min-height: 40px;
-        width: 8px;
-        position: relative;
-    }
-
-    .arrow-icon-container svg.icon {
-        width: 16px;
-        height: 16px;
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-    }
 </style>
+
+<script>
+    var el = document.querySelector('.expand');
+    var body = document.querySelector('body');
+
+    el.onclick = function () {
+        body.classList.toggle('dark');
+    }
+</script>
