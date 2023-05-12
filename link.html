@@ -62,7 +62,7 @@
             <div class="container dialog">
                 <h2>Some users won’t have access</h2>
                 <p>When providing the content for the link, <a href="/" class="link prominent">Go to settings</a> avoid
-                    generic descriptions like "click here" or "go to". Instead, use specific descriptions.</p>
+                    generic descriptions like <a href="/" class="link prominent">click here</a> or "go to". Instead, use specific descriptions.</p>
             </div>
             <p>Example of the dialog box with link inside</p>
         </div>
@@ -88,7 +88,7 @@
     .dialog {
         padding: 56px;
         border-radius: 8px;
-        background-color: var(--page);
+        background-color: var(--colors-background-neutrals-container);
         box-shadow: var(--shadow);
         display: flex;
         flex-direction: column;
@@ -105,49 +105,4 @@
     }
 
     /* Dialog ends here */
-
-    a.link {
-        line-height: 20px;
-        padding: 0 2px;
-        border-bottom: 1px solid;
-        text-decoration: none;
-        font-family: 'Open Sans', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-    }
-
-    a.link.prominent {
-        color: #3859FF;
-    }
-
-    a.link.prominent:hover {
-        color: #2436B1;
-        background-color: #D9E0FF;
-    }
-
-    a.link.prominent:active {
-        color: #122277;
-    }
-
-    a.link.subtle {
-        color: #686685;
-        border-color: #686685;
-    }
-
-    a.link.subtle:hover {
-        color: #36345D;
-        border-color: #36345D;
-        background: #E7E7E7;
-    }
-
-    a.link.subtle:active {
-        color: #050038;
-        border-color: #050038;
-    }
-
-    a.link:focus-visible {
-        appearance: none;
-        outline: none;
-        box-shadow: var(--focus);
-    }
 </style>
