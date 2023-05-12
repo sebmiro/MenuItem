@@ -108,24 +108,35 @@
                 static tokens. Instead we should overwrite Icon Button with static tokens:</p>
             <ul>
                 <li>--static-border-subtle</li>
-                <li>--static-border-subtle-hover</li>
-                <li>--static-border-subtle-active</li>
                 <li>--static-icon-subtle</li>
-                <li>--static-icon-subtle-hover</li>
-                <li>--static-icon-subtle-active</li>
                 <li>--static-background-subtle</li>
                 <li>--static-background-subtle-hover</li>
                 <li>--static-background-subtle-active</li>
             </ul>
             <div class="container notification warning correct">
                 <p>When providing the content for the link, <a href="/" class="link prominent">Go to settings</a></p>
-                <div class="btn outline" tabindex="0">
+                <div class="btn" tabindex="0">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 6L18 18M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round" />
                     </svg>
 
                 </div>
             </div>
+            <div class="container notification warning correct">
+                <div class="wrapper">
+                    <p>When providing the content for the link.</p>
+                    <div class="btn outline medium" tabindex="0">
+                        Learn more
+                    </div>
+                </div>
+                <div class="btn" tabindex="0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18 18M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+
+                </div>
+            </div>
+
             <p>Correct version with Icon Button that uses static Alias tokens.</p>
         </div>
     </div>
@@ -191,7 +202,7 @@
     .notification {
         padding: 8px 16px;
         border-radius: 0px;
-        background-color: var(--page);
+        background-color: var(--colors-background-neutrals-container);
         display: flex;
         flex-direction: row;
         min-width: 720px;
@@ -205,7 +216,7 @@
     .notification p,
     .notification a,
     .notification h2 {
-        color: var(--text);
+        color: var(--colors-text-neutrals);
     }
 
     .base {
@@ -295,16 +306,6 @@
 
     /* End of the overwrites for the base components */
 
-    a.link {
-        line-height: 20px;
-        padding: 0 2px;
-        border-bottom: 1px solid;
-        text-decoration: none;
-        font-family: 'Open Sans', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-    }
-
     .group {
         max-width: calc(720px + 24px);
         width: 100%;
@@ -318,6 +319,6 @@
     var body = document.querySelector('body');
 
     el.onclick = function () {
-        body.classList.toggle('expanded');
+        body.classList.toggle('dark');
     }
 </script>
