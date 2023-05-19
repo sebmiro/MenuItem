@@ -1,6 +1,7 @@
 @import "aliases.css";
 @import "link.css";
 @import "menuitem.css";
+@import "input.css";
 
 :root {
     --header-link: #2436B1;

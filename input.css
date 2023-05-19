@@ -1,0 +1,21 @@
+input {
+    border: 2px solid black;
+    outline: none;
+    height: 40px;
+}
+
+input:hover {
+    border: 2px solid grey;
+}
+
+input:active {
+    border: 2px solid red;
+}
+
+input:focus {
+    background: yellow;
+}
+
+input:active:focus {
+    background-color: purple;
+}
