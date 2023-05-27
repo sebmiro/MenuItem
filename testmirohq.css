@@ -252,4 +252,165 @@
   --colors-text-success: var(--colors-green-100);
   --colors-text-warning: var(--colors-blue-1000);
 }
-/*# sourceMappingURL=aliases.css.map */
+
+html,
+body,
+#SettingsApp {
+  height: 100%;
+}
+
+.SettingsApp {
+  background-color: var(--colors-background-neutrals-page-subtle);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.SettingsApp * {
+  box-sizing: border-box;
+}
+.SettingsApp svg * {
+  stroke-width: 1.5px;
+}
+.SettingsApp p {
+  color: var(--colors-text-neutrals);
+  max-width: 35ch;
+}
+.SettingsApp button {
+  gap: 8px;
+}
+.SettingsApp .CheckboxFiller {
+  width: 24px;
+  height: 24px;
+  color: var(--colors-text-neutrals-disabled);
+  text-align: center;
+}
+.SettingsApp .ButtonGroup {
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+}
+.SettingsApp label {
+  color: var(--colors-text-neutrals);
+}
+.SettingsApp label.subtle {
+  color: var(--colors-text-neutrals-subtle);
+}
+.SettingsApp .subtle p {
+  color: var(--colors-text-neutrals-subtle);
+}
+.SettingsApp header {
+  height: 64px;
+  background-color: var(--colors-background-neutrals-container);
+  box-shadow: var(--shadows-100);
+  width: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+.SettingsApp .page {
+  max-width: 1360px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+  margin-top: 96px;
+}
+.SettingsApp .sidebar,
+.SettingsApp .content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--colors-background-neutrals-container);
+  border-radius: 4px;
+  box-shadow: var(--shadows-100);
+}
+.SettingsApp .sidebar {
+  width: 100%;
+  max-width: 280px;
+  padding: 16px 0px;
+}
+.SettingsApp .sidebar div[data-radix-popper-content-wrapper] div {
+  background-color: var(--colors-background-neutrals-inverted);
+  color: var(--colors-text-neutrals-inverted);
+}
+.SettingsApp .sidebar div[data-radix-popper-content-wrapper] div * {
+  fill: var(--colors-background-neutrals-inverted);
+}
+.SettingsApp .sidebar button[type=primary] {
+  justify-content: flex-start;
+  border-radius: 0;
+  padding-left: 18px;
+}
+.SettingsApp .sidebar button[type=primary] + button {
+  margin-top: 4px;
+}
+.SettingsApp .sidebar p {
+  margin: 24px;
+  display: block;
+}
+.SettingsApp .sidebar .SidebarHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px 24px;
+  border-bottom: 1px solid var(--colors-border-neutrals-subtle);
+  margin-bottom: 16px;
+}
+.SettingsApp .sidebar .SidebarHeader svg#logo {
+  width: 32px;
+  height: 32px;
+  max-width: 32px;
+  width: 100%;
+  background-color: rgb(255, 208, 47);
+  border-radius: 2px;
+  display: block;
+}
+.SettingsApp .content {
+  width: 100%;
+  gap: 16px;
+  padding: 24px 0;
+}
+.SettingsApp .content .icons {
+  flex-direction: row;
+  gap: 16px;
+  color: var(--colors-icon-neutrals);
+}
+.SettingsApp section {
+  padding: 0 32px;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.SettingsApp section.components + section {
+  padding-top: 16px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.row .column {
+  display: flex;
+  flex-direction: column;
+}
+/*# sourceMappingURL=testmirohq.css.map */

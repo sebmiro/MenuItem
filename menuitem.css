@@ -203,15 +203,15 @@ form {
 }
 
 .menu-item svg.icon path {
-    stroke: var(--colors-icon-neutrals-with-text);
+    stroke: var(--colors-icon-neutrals-text);
 }
 
 .menu-item svg.icon path[fill="black"] {
-    fill: var(--colors-icon-neutrals-with-text);
+    fill: var(--colors-icon-neutrals-text);
 }
 
 .menu-item svg.icon rect {
-    fill: var(--colors-icon-neutrals-with-text);
+    fill: var(--colors-icon-neutrals-text);
 }
 
 .menu-item:hover {
